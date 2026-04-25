@@ -8,10 +8,10 @@ class Player:
   def turn(self, action):
     if self.action = "1":
       print("You fired your cannons. Fire in the hole!!!"
-      loaded = False
+      self.loaded = False
     if self.action = "2":
       print("You reloaded your cannons.")
-      loaded = True
+      self.loaded = True
     if self.action = "3" and self.bowsprit = True:
       print("You evaded the enemy's move")
     if self.action = "4" and self.bowsprit = True:
