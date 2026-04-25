@@ -7,7 +7,7 @@ class Player:
     
   def turn(self, action):
     if self.action == "1":
-      print("You fired your cannons. Fire in the hole!!!"
+      print("You fired your cannons. Fire in the hole!!!")
       self.loaded = False
     if self.action == "2":
       print("You reloaded your cannons.")
