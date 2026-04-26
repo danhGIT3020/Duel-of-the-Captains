@@ -1,11 +1,11 @@
 class Player:
-  def __init__(self, action, loaded, bowsprit, health):
-    self.action = ""
+  def __init__(self, action):
+    self.action = action
     self.loaded = True
     self.bowsprit = True
     self.health = 100
     
-  def turn(self, action):
+  def turn(self):
     if self.action == "1":
       print("You fired your cannons. Fire in the hole!!!")
       self.loaded = False
@@ -16,3 +16,6 @@ class Player:
       print("You evaded the enemy's move")
     if self.action == "4" and self.bowsprit == True:
       print("You charged the enemy ship!")
+    if self.action == "5":
+      print("You escaped the enemy")
+      return False
