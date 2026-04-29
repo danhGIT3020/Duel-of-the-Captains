@@ -8,7 +8,8 @@ Second Sprint:
 - [x] Add python file to repository
 - [x] Start coding by creating Player_class and Enemy_class
 - [x] Create DueloftheCaptains, import the other two classes, and create the main while loop.
-- [ ] Finish first version of code
 Third Sprint:
-- [ ]
-- [ ]
+- [ ] Finish main while loop with proper print statements for most scenarios
+- [ ] Create presenation slide with slogan
+- [ ] Take screenshots of program and upload them into the slides
+- [ ] Submit slides
