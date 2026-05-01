@@ -37,10 +37,13 @@ while True:
             print("The enemy's attack landed! You've taken 20 damage!")
             player_action.health -= 20
         else:
-            pass
+            pass    
     if enemy_decision.decision == 4:
         if player_action.action != "3" and enemy_decision.bowsprit == True:
             print("The enemy crashed into your ship!!! You've taken 60 damage, but the enemy has lost their ability to evade and took 20 damage!")
+            player_action.health -= 60
+            enemy_decision.health -= 20
+            enemy_decision.bowsprit == False
     if player_action.action == "5":
         break
     if player_action.health <= 0 and enemy_decision.health > 0:
