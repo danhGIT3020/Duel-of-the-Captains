@@ -21,9 +21,9 @@ while True:
         if enemy_decision.decision != 3:
             print("Your attack landed! Enemy has taken 20 damage!")
             enemy_decision.health -= 20
-        elif player_action.loaded == False:
-            print("You need to reload your cannons first!")
-            pass
+    # if player_action.action == "1" and player_action.loaded == False:
+    #     print("You need to reload your cannons first!")
+    #     pass
     if player_action.action == "4":
         if enemy_decision.decision != 3:
             print("You crashed into the enemy ship!!! Enemy has taken 60 damage, but you've lost your evade option and taken 20 damage!")
@@ -37,7 +37,7 @@ while True:
             print("The enemy's attack landed! You've taken 20 damage!")
             player_action.health -= 20
         else:
-            pass    
+            pass
     if enemy_decision.decision == 4:
         if player_action.action != "3" and enemy_decision.bowsprit == True:
             print("The enemy crashed into your ship!!! You've taken 60 damage, but the enemy has lost their ability to evade and took 20 damage!")
@@ -53,12 +53,12 @@ while True:
         break
     if player_action.health <= 0 and enemy_decision.health <= 0:
         print("\nBoth ships lost all their health! Stalemate!!!")
-        print("\nGAME OVER")
+        print("\n[GAME OVER]")
         break
     elif player_action.health > 0 and enemy_decision.health <= 0:
         print("\nThe enemy lost all their health! Cheers to the captain!!!")
         print("You survived with", player_action.health, "left.")
-        print("\nYOU WIN")
+        print("\n[YOU WIN]")
         break
     
           
