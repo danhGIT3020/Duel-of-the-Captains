@@ -21,9 +21,6 @@ while True:
         if enemy.decision != 3:
             print("Your attack landed! Enemy has taken 20 damage!")
             enemy.health -= 20
-    # if player_action.action == "1" and player_action.loaded == False:
-    #     print("You need to reload your cannons first!")
-    #     pass
     if player.action == "4":
         if enemy.decision != 3:
             print("You crashed into the enemy ship!!! Enemy has taken 60 damage, but you've lost your evade option and taken 20 damage!")
