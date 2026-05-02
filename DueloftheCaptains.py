@@ -16,47 +16,53 @@ while True:
     player.action = input()
     enemy.decision = random.randint(1,4)
     player.turn()
-    enemy.enemy_turn()
+    if player.action == "5":
+        print("\nOthers may consider you a coward, but cowards survive.")
+        print("You escaped with", player.health, "health left.")
+        print("\n[GAME OVER]")
+        break
     if player.action == "1":
         if enemy.decision != 3:
             print("Your attack landed! Enemy has taken 20 damage!")
             enemy.health -= 20
+            player.loaded = False
+        elif player.action == "1" and player.loaded == False:
+            print("You need to reload your cannons first!")
+            pass
     if player.action == "4":
         if enemy.decision != 3:
             print("You crashed into the enemy ship!!! Enemy has taken 60 damage, but you've lost your evade option and taken 20 damage!")
             enemy.health -= 60
             player.health -= 20
-            player.bowsprit == False
+            player.bowsprit = False
         else:
             pass
+
+    enemy.enemy_turn()
     if enemy.decision == 1:
-        if player.action != "3" and enemy.loaded == True:
+        if player.action != "3":
             print("The enemy's attack landed! You've taken 20 damage!")
             player.health -= 20
-        else:
-            pass
     if enemy.decision == 4:
         if player.action != "3" and enemy.bowsprit == True:
             print("The enemy crashed into your ship!!! You've taken 60 damage, but the enemy has lost their ability to evade and took 20 damage!")
             player.health -= 60
             enemy.health -= 20
-            enemy.bowsprit == False
-    if player.action == "5":
-        break
+            enemy.bowsprit = False
+            
     if player.health <= 0 and enemy.health > 0:
         print("\nYou've lost all your health! Abandon ship!!!")
-        print("The enemy survived with", enemy.health, "left.")
+        print("The enemy survived with", enemy.health, "health left.")
         print("\n[GAME OVER]")
         break
     if player.health <= 0 and enemy.health <= 0:
-        print("\nBoth ships lost all their health! Stalemate!!!")
-        print("\n[GAME OVER]")
+        print("\nBoth ships lost all their health! Dead men tell no tales I suppose...")
+        print("\n[STALEMATE]")
         break
     elif player.health > 0 and enemy.health <= 0:
         print("\nThe enemy lost all their health! Cheers to the captain!!!")
-        print("You survived with", player.health, "left.")
+        print("You survived with", player.health, "health left.")
         print("\n[YOU WIN]")
         break
-    
           
     
