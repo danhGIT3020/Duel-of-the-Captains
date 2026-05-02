@@ -8,7 +8,6 @@ class Enemy:
   def enemy_turn(self):
     if self.decision == 1 and self.loaded == True:
       print("The enemy ship has fired their cannons!")
-      self.loaded = False
     elif self.decision == 2:
       print("The enemy ship has reloaded their cannons.")
       self.loaded = True
