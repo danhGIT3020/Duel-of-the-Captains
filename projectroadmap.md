@@ -11,4 +11,11 @@ Second Sprint:
 Third Sprint:
 - [x] Finish main while loop with proper print statements for most scenarios
 - [x] Create presenation slide with slogan
-- [ ] Submit slide
+- [x] Submit slide
+Presentation:
+- [ ] Create presentation title
+- [ ] Create Player_class slide
+- [ ] Create Enemy_class slide
+- [ ] Create DueloftheCaptains slide(s)
+- [ ] Present on Thursday
+- [ ] Figure out how to submit presentation recording
