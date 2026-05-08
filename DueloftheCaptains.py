@@ -22,13 +22,14 @@ while True:
         print("\n[GAME OVER]")
         break
     if player.action == "1":
-        if enemy.decision != 3 and player.loaded == True:
+        if player.action == "1" and player.loaded == False:
+            print("You need to reload your cannons first!")
+        if enemy.decision == 3:
+            player.loaded = False
+        elif enemy.decision != 3 and player.loaded == True:
             print("Your attack landed! Enemy has taken 20 damage!")
             enemy.health -= 20
             player.loaded = False
-        elif player.action == "1" and player.loaded == False:
-            print("You need to reload your cannons first!")
-            pass
     if player.action == "4":
         if enemy.decision != 3 and player.bowsprit == True:
             print("You crashed into the enemy ship!!! Enemy has taken 60 damage, but you've lost your evade option and taken 20 damage!")
@@ -49,6 +50,8 @@ while True:
             enemy.loaded = False
         elif player.action == 3:
             enemy.loaded = False
+    if enemy.decision == 3 and enemy.bowsprit == False:
+        print("The enemy blundered!")
     if enemy.decision == 4 and enemy.bowsprit == False:
         print("The enemy blundered!")
     if enemy.decision == 4 and enemy.bowsprit == True:
