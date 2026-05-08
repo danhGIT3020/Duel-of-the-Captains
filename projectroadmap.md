@@ -14,8 +14,8 @@ Third Sprint:
 - [x] Submit slide
 Presentation:
 - [x] Create presentation title
-- [ ] Create Player_class slide
-- [ ] Create Enemy_class slide
-- [ ] Create DueloftheCaptains slide(s)
+- [x] Create Player_class slide
+- [x] Create Enemy_class slide
+- [ ] Finish DueloftheCaptains slide(s)
 - [ ] Present on Thursday
-- [ ] Figure out how to submit presentation recording
+- [ ] Figure out how to submit presentation recording/screenshot
