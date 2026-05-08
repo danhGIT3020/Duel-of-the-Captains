@@ -17,5 +17,5 @@ Presentation:
 - [x] Create Player_class slide
 - [x] Create Enemy_class slide
 - [ ] Finish DueloftheCaptains slide(s)
-- [ ] Present on Thursday
+- [ ] Present on Friday
 - [ ] Figure out how to submit presentation recording/screenshot
